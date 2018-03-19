@@ -10,8 +10,11 @@
         <div id="list-solicitudReserva" class="content scaffold-list" role="main">
             <h1>Solicitudes de Reserva pendientes</h1>
             <g:if test="${flash.message}">
-                <div class="message" role="status">${flash.message}</div>
+                <div class="message alert alert-danger" role="status alert">${flash.message}</div>
             </g:if>
+            <g:elseif test="${flash.messageAceptado}">
+                <div class="message alert alert-success" role="status alert">${flash.messageAceptado}</div>
+            </g:elseif>
 
             <table class="table table-sm" collection="${solicitudReservaList}">
                 <tbody>
@@ -24,6 +27,7 @@
                         <g:sortableColumn property="email" title="E-Mail"><th scope="col"></th></g:sortableColumn>
                         <g:sortableColumn property="fechaReserva" title="Fecha de Reserva"><th scope="col"></th></g:sortableColumn>
                         <g:sortableColumn property="cantidadHuespedes" title="Cantidad de Huespedes"><th scope="col"></th></g:sortableColumn>
+                        <g:sortableColumn property="tipoAutomovil" title="Automovil"><th scope="col"></th></g:sortableColumn>
                         <th scope="col">Opciones</th>
                     </thead>
                 <g:each in="${solicitudReservaList}" var="solicitudReserva">
@@ -37,6 +41,7 @@
                     <td>${solicitudReserva.email}</td>
                     <td>${solicitudReserva.fechaReserva}</td>
                     <td>${solicitudReserva.cantidadHuespedes}</td>
+                    <td>${solicitudReserva.tipoAutomovil}</td>
                     <td>
                     <g:form resource="${solicitudReserva}" method="DELETE">
                         <g:actionSubmit type="submit" class="btn btn-success" value="Aceptar" action="aceptarSolicitud" params="${solicitudReserva}"/>

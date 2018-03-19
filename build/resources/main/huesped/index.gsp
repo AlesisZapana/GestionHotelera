@@ -8,7 +8,7 @@
     <body>
         
         <div id="list-huesped" class="content scaffold-list" role="main">
-            <h1>Huéspedes Registrados</h1>
+            <h1>Titulares Registrados</h1>
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
@@ -19,6 +19,7 @@
                     <g:sortableColumn property="numeroDocumento" title="Número de Documento" ><th scope="col"></th></g:sortableColumn>
                     <g:sortableColumn property="nombre" title="Nombre" ><th scope="col"></th></g:sortableColumn>
                     <g:sortableColumn property="apellido" title="Apellido" ><th scope="col"></th></g:sortableColumn>
+                    <g:sortableColumn property="tipoReserva" title="Reserva"><th scope="col"></th></g:sortableColumn>
                     <g:sortableColumn property="email" title="E-Mail" ><th scope="col"></th></g:sortableColumn>
                 </thead>
                 <tbody>
@@ -29,6 +30,7 @@
                         <td>${huesped.numeroDocumento}</td>
                         <td>${huesped.nombre}</td>
                         <td>${huesped.apellido}</td>
+                        <td>${huesped.tipoReserva}</td>
                         <td>${huesped.email}</td>
                     </tr>
                     </g:each>

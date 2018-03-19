@@ -20,7 +20,15 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	[pattern: '/solicitudReserva/create', access: ['permitAll']],
 	[pattern: '/solicitudReserva/save/**', access: ['permitAll']],
 	[pattern: '/solicitudReserva/show/**', access: ['permitAll']],
-	[pattern: '/index/index',          access: ['permitAll']]
+	[pattern: '/index/index',          access: ['permitAll']],
+	[pattern: '/calendario',          access: ['ROLE_ADMIN']],
+	[pattern: '/Automovil/**',          access: ['ROLE_ADMIN']],
+	[pattern: '/solicitudHabitacion/create', access: ['permitAll']],
+	[pattern: '/solicitudHabitacion/save/**', access: ['permitAll']],
+	[pattern: '/solicitudHabitacion/show/**', access: ['permitAll']],
+	[pattern: '/solicitudAutomovil/create', access: ['permitAll']],
+	[pattern: '/solicitudAutomovil/save/**', access: ['permitAll']],
+	[pattern: '/solicitudAutomovil/show/**', access: ['permitAll']]
 ]
 
 grails.plugin.springsecurity.filterChain.chainMap = [

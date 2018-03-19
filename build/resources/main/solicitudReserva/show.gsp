@@ -21,10 +21,7 @@
             <sec:ifLoggedIn>
             <h1>Solicitud de Reserva ${solicitudReserva.id}</h1>
             </sec:ifLoggedIn>
-            <!--<g:if test="${flash.message}">
-            <div class="message" role="status">${flash.message}</div>
-            </g:if>-->
-            <!--<f:display bean="solicitudReserva" />-->
+            
             
             <dl class="row">
                 <dt class="col-sm-3">Nombre:</dt>
@@ -44,6 +41,9 @@
 
                 <dt class="col-sm-3">Cantidad de Huéspedes</dt>
                 <dd class="col-sm-9">${solicitudReserva.cantidadHuespedes}</dd>
+
+                <dt class="col-sm-3">Tipo Automóvil</dt>
+                <dd class="col-sm-9">${solicitudReserva.tipoAutomovil}</dd>
             </dl>
             <a class="btn btn-primary" href="/" role="button">Volver</a>
             <!--<g:form resource="${this.solicitudReserva}" method="DELETE">

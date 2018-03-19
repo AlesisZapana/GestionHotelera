@@ -6,6 +6,7 @@ class Huesped {
 	String tipoDocumento
 	Integer numeroDocumento
 	String email
+    String tipoReserva
     static constraints = {
     	numeroDocumento unique:true
     	email email:true, blank:false

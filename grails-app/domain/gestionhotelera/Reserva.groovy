@@ -8,7 +8,10 @@ class Reserva {
 	//borrar la siguiente linea(?)
 	//static hasOne = [habitacion:Habitacion]
 	Huesped titular
-
+    String start
+    String end
+    String title
+    String url
     static constraints = {
     	fechaReserva blank:false
     	cantidadHuespedes blank:false

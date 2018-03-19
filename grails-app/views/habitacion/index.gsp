@@ -3,11 +3,11 @@
     <head>
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'habitacion.label', default: 'Habitacion')}" />
-        <title><g:message code="default.list.label" args="[entityName]" /></title>
+        <title>Lista de Habitaciones</title>
     </head>
     <body>
         <div id="list-habitacion" class="content scaffold-list" role="main">
-            <a href="/habitacion/create">Nueva habitacion</a>
+            <a class="badge badge-primary" href="/habitacion/create">Nueva habitacion</a>
             <h1><g:message code="default.list.label" args="[entityName]" /></h1>
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>

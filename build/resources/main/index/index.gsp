@@ -25,7 +25,7 @@
       </div>
     </header>
 
-    <!--el hotel llega nulo-->
+   
     <!--<g:fieldValue controller="hotel" action="getHotel" bean="hotel" />
     <input type="text" value="${fieldValue(bean:hotel, field:'direccion')}"/>
     <div id="hotelID">
@@ -39,7 +39,7 @@
       <f:display bean="hotel"/>
     </g:form>-->
 
-    <!-- Main Content - Aca deberia ir el otro main-->
+    <!-- Main Content -->
     <!--
     <div class="container">
       <div class="row">
